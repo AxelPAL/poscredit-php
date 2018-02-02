@@ -1,0 +1,32 @@
+{
+    "name": "axelpal/poscredit",
+    "description": "PosCredit integration API",
+    "keywords": ["PosCredit"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AxelPAL",
+            "email": "axelpal@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "AxelPAL\\PosCredit\\": ["src/"]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AxelPAL\\PosCredit\\Tests\\": ["tests/src"]
+        }
+    },
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "require-dev": {
+        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4",
+        "vimeo/psalm": "^0.3.86"
+    }
+}
