@@ -25,7 +25,6 @@ use AxelPAL\PosCredit\Objects\Services;
 use AxelPAL\PosCredit\Objects\TransferPayment;
 use AxelPAL\PosCredit\Requests\AcceptOptyRequest;
 use AxelPAL\PosCredit\Requests\AuthOptyRequest;
-use AxelPAL\PosCredit\Requests\CalculatorBookOptyRequest;
 use AxelPAL\PosCredit\Requests\CancelAuthOptyRequest;
 use AxelPAL\PosCredit\Requests\CancelOptyRequest;
 use AxelPAL\PosCredit\Requests\CreateOptyRequest;
@@ -101,7 +100,6 @@ class LoanService extends \SoapClient
       'documents' => Documents::class,
       'SignDocShortOptyRequest' => SignDocShortOptyRequest::class,
       'SignDocShortOptyResponse' => SignDocShortOptyResponse::class,
-      'CalculatorBookOptyRequest' => CalculatorBookOptyRequest::class,
     );
 
     /**
@@ -231,14 +229,5 @@ class LoanService extends \SoapClient
     public function signDocShortOpty(SignDocShortOptyRequest $SignDocShortOptyRequest)
     {
         return $this->__soapCall('SignDocShortOpty', [$SignDocShortOptyRequest]);
-    }
-
-    /**
-     * @param CalculatorBookOptyRequest $CalculatorBookOptyRequest
-     * @return SignDocShortOptyResponse
-     */
-    public function calculatorBookOpty(CalculatorBookOptyRequest $CalculatorBookOptyRequest)
-    {
-        return $this->__soapCall('CalculatorBookOpty', [$CalculatorBookOptyRequest]);
     }
 }
