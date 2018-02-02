@@ -5,13 +5,20 @@
 [![Latest Stable Version](https://poser.pugx.org/axelpal/poscredit/v/stable)](https://packagist.org/packages/axelpal/poscredit)
 [![Total Downloads](https://poser.pugx.org/axelpal/poscredit/downloads)](https://packagist.org/packages/axelpal/poscredit)
 
-Документация v2.7 от 01 февраля 2018 г: https://api.b2pos.ru/loan/manual/full/
+Документация полной формы v2.7 от 01 февраля 2018 г: https://api.b2pos.ru/loan/manual/full/
+
+Документация краткой формы v2.4 от 01 февраля 2018 г: https://api.b2pos.ru/loan/manual/
 
 ### Инициализация сервиса
 ```php
 $loanService = new LoanService();
 ```
 
+### Получение решения по заявке по сервису «Короткая анкета»
+```php
+$statusRequest = new StatusShortOptyRequest($userId, $userToken, $profileId);
+$response = $loanService->statusShortOpty($statusRequest);
+```
 ### Проверка статуса заявки
 ```php
 $statusRequest = new StatusOptyRequest($userId, $userToken, $profileId);

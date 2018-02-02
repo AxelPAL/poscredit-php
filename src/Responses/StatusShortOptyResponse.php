@@ -7,6 +7,25 @@ use AxelPAL\PosCredit\Objects\TransferPayment;
 
 class StatusShortOptyResponse
 {
+    const STATUS_NEW = 0;                   //новая заявка;
+    const STATUS_IN_PROGRESS = 1;           //в обработке;
+    const STATUS_DENIED = 2;                //в кредите отказано;
+    const STATUS_GRANTED = 3;               //кредит предоставлен;
+    const STATUS_ERROR_INPUT = 4;           //ошибочный ввод;
+    const STATUS_CLIENT_CANCELLED = 5;      //отказ клиента;
+    const STATUS_CONTRACT_AUTHORIZED = 6;   //договор авторизован;
+    const STATUS_CONTRACT_SIGNED = 7;       //договор подписан клиентом;
+
+    const BANK_OTP = 1;
+    const BANK_RENAISSANCE = 2;
+    const BANK_RUS_FINANCE = 3;
+    const BANK_RUSSIAN_STANDARD = 4;
+    const BANK_WESTERN_EXPRESS = 5;
+    const BANK_ALPHA = 6;
+    const BANK_LETO = 7;
+    const BANK_TINKOFF = 8;
+    const BANK_EUROPE = 9;
+    const BANK_SETELEM = 10;
 
     /**
      * @var int $profileID
@@ -14,47 +33,49 @@ class StatusShortOptyResponse
     protected $profileID = null;
 
     /**
-     * @var int $statusID
+     * @var int $statusID идентификатор статуса
      */
     protected $statusID = null;
 
     /**
-     * @var string $answer
+     * @var string $answer Комментарий сотрудника Контакт-центра при обработке заявки
      */
     protected $answer = null;
 
     /**
-     * @var int $bankID
+     * @var int $bankID идентификатор выбранного банка
+     *
      */
     protected $bankID = null;
 
     /**
      * @var string $document
+     * Если status=STATUS_GRANTED, то передается договор в формате Base64 в виде строки
      */
     protected $document = null;
 
     /**
-     * @var float $saleProcent
+     * @var float $saleProcent Процент скидки для клиента при рассрочке
      */
     protected $saleProcent = null;
 
     /**
-     * @var float $firstPayment
+     * @var float $firstPayment Первоначальный взнос
      */
     protected $firstPayment = null;
 
     /**
-     * @var string $contract
+     * @var string $contract Номер банковского договора
      */
     protected $contract = null;
 
     /**
-     * @var float $amount
+     * @var float $amount Сумма кредита в рублях
      */
     protected $amount = null;
 
     /**
-     * @var int $creditTerms
+     * @var int $creditTerms Срок кредита в месяцах
      */
     protected $creditTerms = null;
 
@@ -64,7 +85,7 @@ class StatusShortOptyResponse
     protected $accountNum = null;
 
     /**
-     * @var TransferPayment $transferPayment
+     * @var TransferPayment $transferPayment Блок данных по отправлению платежа за кредит от POS-CREDIT к Партнеру
      */
     protected $transferPayment = null;
 
