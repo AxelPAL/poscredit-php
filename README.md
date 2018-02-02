@@ -9,6 +9,12 @@
 
 Документация краткой формы v2.4 от 01 февраля 2018 г: https://api.b2pos.ru/loan/manual/
 
+## Установка
+
+```php
+composer require axelpal/poscredit
+```
+
 ### Инициализация сервиса
 ```php
 $loanService = new LoanService();
