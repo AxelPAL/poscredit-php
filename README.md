@@ -4,6 +4,7 @@
 [![Dependency Status](https://www.versioneye.com/user/projects/5a74314f0fb24f20ef856f1b/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5a74314f0fb24f20ef856f1b)
 [![Latest Stable Version](https://poser.pugx.org/axelpal/poscredit/v/stable)](https://packagist.org/packages/axelpal/poscredit)
 [![Total Downloads](https://poser.pugx.org/axelpal/poscredit/downloads)](https://packagist.org/packages/axelpal/poscredit)
+[![PHP Version](https://img.shields.io/packagist/php-v/axelpal/poscredit.svg)](https://packagist.org/packages/axelpal/yii2-poscredit)
 
 Документация полной формы v2.7 от 01 февраля 2018 г: https://api.b2pos.ru/loan/manual/full/
 
